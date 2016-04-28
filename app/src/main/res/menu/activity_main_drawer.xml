@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_home" android:icon="@android:drawable/ic_menu_compass"
+        android:title="Home" />
+
+    <item android:title="Tools">
+        <menu>
+            <item android:id="@+id/nav_apps_installations" android:icon="@android:drawable/ic_menu_manage"
+                android:title="Apps Installations Tracker" />
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <item android:id="@+id/nav_share" android:icon="@android:drawable/ic_menu_share"
+                android:title="Share this App" />
+            <item android:id="@+id/nav_my_work" android:icon="@android:drawable/ic_menu_sort_alphabetically"
+                android:title="My Work" />
+            <item android:id="@+id/nav_contact_me" android:icon="@android:drawable/ic_menu_send"
+                android:title="Contact Me" />
+        </menu>
+    </item>
+
+</menu>
+
+
+<!--
+<group android:checkableBehavior="single">
+<item android:id="@+id/nav_camara" android:icon="@android:drawable/ic_menu_camera"
+    android:title="Import" />
+<item android:id="@+id/nav_gallery" android:icon="@android:drawable/ic_menu_gallery"
+    android:title="Gallery" />
+<item android:id="@+id/nav_slideshow" android:icon="@android:drawable/ic_menu_slideshow"
+    android:title="Slideshow" />
+<item android:id="@+id/nav_manage" android:icon="@android:drawable/ic_menu_manage"
+    android:title="Tools" />
+</group>-->

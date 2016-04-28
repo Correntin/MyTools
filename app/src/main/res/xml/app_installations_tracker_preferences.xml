@@ -1,0 +1,24 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:defaultValue="false">
+
+    <SwitchPreference
+        android:key="@string/apps_tracker_preferences_activation_key"
+        android:title="@string/apps_installations_tracker_switch_name"
+        android:summary="@string/apps_installations_tracker_switch_description"
+        android:defaultValue="true" />
+
+    <SwitchPreference
+        android:id="@id/app_installations_tracker_package_added"
+        android:key="@string/apps_tracker_preferences_package_added_key"
+        android:title="@string/apps_installations_tracker_title_package_added"
+        android:defaultValue="true" />
+
+    <SwitchPreference
+        android:id="@id/app_installations_tracker_package_changed"
+        android:key="@string/apps_tracker_preferences_package_changed_key"
+        android:title="@string/apps_installations_tracker_title_package_changed"
+        android:defaultValue="true" />
+
+</PreferenceScreen>

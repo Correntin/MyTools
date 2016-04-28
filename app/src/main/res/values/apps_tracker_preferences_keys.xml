@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="apps_tracker_preferences_activation_key">apps_tracker_preferences_activation_key</string>
+    <string name="apps_tracker_preferences_package_added_key">apps_tracker_preferences_package_added_key</string>
+    <string name="apps_tracker_preferences_package_changed_key">apps_tracker_preferences_package_changed_key</string>
+</resources>

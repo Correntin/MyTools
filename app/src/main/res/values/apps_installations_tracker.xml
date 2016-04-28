@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="apps_installations_tracker_switch_name">Activate Service</string>
+    <string name="apps_installations_tracker_switch_description">Receive a notification when an application is installed or updated</string>
+
+    <string name="apps_installations_tracker_title_package_added">New App</string>
+    <string name="apps_installations_tracker_title_package_changed">App Changed</string>
+    <string name="apps_installations_tracker_title_package_replaced">App Replaced</string>
+    <string name="apps_installations_tracker_title_package_restarted">App Restarted</string>
+    <string name="apps_installations_tracker_title_package_removed">App Removed</string>
+    <string name="apps_installations_tracker_title_package_fully_removed">App Fully Removed</string>
+    <string name="apps_installations_tracker_title_package_data_cleared">Data Cleared</string>
+    <string name="apps_installations_tracker_title_package_first_launch">First Launch</string>
+</resources>
