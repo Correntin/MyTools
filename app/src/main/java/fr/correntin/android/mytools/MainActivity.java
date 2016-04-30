@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import fr.correntin.android.mytools.fragments.AllAppsFragment;
 import fr.correntin.android.mytools.fragments.AppsInstallationsPreferencesFragment;
 import fr.correntin.android.mytools.fragments.WelcomeFragment;
 import fr.correntin.android.mytools.threads.ThreadPool;
@@ -23,6 +24,7 @@ import fr.correntin.android.mytools.threads.ThreadPoolTaskListener;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
+    private FloatingActionButton floatingActionButton;
 
     private void addFragment(Fragment fragment)
     {
@@ -52,8 +54,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener()
+        this.floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
+        this.floatingActionButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                   //      .setAction("Action", null).show();
             }
         });
+
 
         this.addFragment(new WelcomeFragment());
 
@@ -132,10 +135,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(this, "Not implemented!", Toast.LENGTH_SHORT).show();
             return true;
         }
-        else if (id == R.id.nav_contact_me)
+        else if (id == R.id.nav_list_apps)
         {
-            Toast.makeText(this, "Not implemented!", Toast.LENGTH_SHORT).show();
-            return true;
+            this.replaceFragment(new AllAppsFragment());
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
