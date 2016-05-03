@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import fr.correntin.android.mytools.fragments.AllAppsFragment;
 import fr.correntin.android.mytools.fragments.AppsInstallationsPreferencesFragment;
+import fr.correntin.android.mytools.fragments.LauncherFragment;
 import fr.correntin.android.mytools.fragments.WelcomeFragment;
 import fr.correntin.android.mytools.threads.ThreadPool;
 import fr.correntin.android.mytools.threads.ThreadPoolTaskListener;
@@ -137,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if (id == R.id.nav_list_apps)
         {
-            this.replaceFragment(new AllAppsFragment());
+            this.replaceFragment(new LauncherFragment());
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
