@@ -10,6 +10,10 @@
                 android:title="All Apps" />
             <item android:id="@+id/nav_apps_installations" android:icon="@android:drawable/ic_menu_manage"
                 android:title="Apps Installations Tracker" />
+            <item android:id="@+id/nav_boat_location" android:icon="@android:drawable/ic_dialog_map"
+                  android:title="Boat Location Tracker" />
+            <item android:id="@+id/nav_launcher" android:icon="@android:drawable/ic_dialog_dialer"
+                  android:title="Apps Launcher" />
         </menu>
     </item>
 

@@ -3,7 +3,6 @@ package fr.correntin.android.mytools.utils;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,9 +10,10 @@ import android.content.pm.ApplicationInfo;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
+import android.os.Build;
 import android.util.Log;
 
-import fr.correntin.android.mytools.NotificationAppActivity;
+import fr.correntin.android.mytools.appsinstallationstracker.NotificationAppActivity;
 import fr.correntin.android.mytools.R;
 
 /**
@@ -27,7 +27,7 @@ public class AppsInstallationsTrackerUtils
         final boolean activated = sharedPreferences.getBoolean(context.getString(R.string.apps_tracker_preferences_activation_key), true);
 
         Log.d("CORENTIN", "AppsInstallationsTrackerUtils.isActivated()=" + activated);
-        
+
         return activated;
     }
 
@@ -48,7 +48,9 @@ public class AppsInstallationsTrackerUtils
 
     public static Notification.Action buildNotificationAction(final Context context, final int icon, final String title, final PendingIntent pendingIntent)
     {
-        return (new Notification.Action.Builder(Icon.createWithResource(context, icon), title, pendingIntent)).build();
+        if (Build.VERSION.SDK_INT >= 23)
+            return (new Notification.Action.Builder(Icon.createWithResource(context, icon), title, pendingIntent)).build();
+        return null;
     }
 
     public static PendingIntent buildAndroidDetailsAppsIntent(final Context context, final String packageName)
@@ -61,12 +63,9 @@ public class AppsInstallationsTrackerUtils
 
     public static Icon buildCurrentAppIcon(Context applicationContext, ApplicationInfo applicationInfo)
     {
-        return Icon.createWithBitmap(((BitmapDrawable) applicationContext.getPackageManager().getApplicationIcon(applicationInfo)).getBitmap());
+        if (Build.VERSION.SDK_INT >= 23)
+            return Icon.createWithBitmap(((BitmapDrawable) applicationContext.getPackageManager().getApplicationIcon(applicationInfo)).getBitmap());
+        return Icon.createWithResource(applicationContext, applicationInfo.icon);
     }
 
-    public static void addNotification(final Context context, final Notification notification, final int notificationId)
-    {
-        final NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-        notificationManager.notify(notificationId, notification);
-    }
 }

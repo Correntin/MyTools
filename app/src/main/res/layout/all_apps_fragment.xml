@@ -4,5 +4,8 @@
     android:id="@+id/all_apps_fragment_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:dividerHeight="0dp"
+    android:divider="#FFFFFF"
+    >
 </ListView>

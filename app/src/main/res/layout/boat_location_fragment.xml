@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/boat_location_phone_number_edittext"
+        android:text="Phone Number"/>
+
+    <EditText
+        android:id="@id/boat_location_phone_number_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:paddingBottom="20dp"
+        android:text="0676588655"
+        android:inputType="phone"/>
+
+    <Button
+        android:id="@+id/boat_location_start_stop_service_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="Start Service"
+        android:enabled="false"/>
+
+</LinearLayout>

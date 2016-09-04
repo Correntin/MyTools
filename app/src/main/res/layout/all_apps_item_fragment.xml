@@ -1,20 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:background="#F2F2F2"
+    >
 
-    <TextView
-        android:id="@+id/all_apps_fragment_list_textview_app_label"
+    <!-- http://stackoverflow.com/questions/24518376/override-android-l-cardview-state-pressed-for-older-versions-of-android?answertab=votes#tab-top -->
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textStyle="bold"
-        />
+        android:layout_height="wrap_content"
+        style="@style/CardViewStyle"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="5dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        >
 
-    <TextView
-        android:id="@+id/all_apps_fragment_list_textview_permissions"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textAppearance="@android:style/TextAppearance.Small"
-        />
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/all_apps_fragment_list_textview_app_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/all_apps_fragment_list_textview_permissions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/all_apps_fragment_list_textview_versions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

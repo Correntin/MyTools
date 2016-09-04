@@ -2,10 +2,9 @@ package fr.correntin.android.mytools.utils;
 
 import android.content.Context;
 
-import java.util.Collections;
 import java.util.Comparator;
 
-import fr.correntin.android.mytools.model.AndroidApp;
+import fr.correntin.android.mytools.listapps.model.AndroidApp;
 
 /**
  * Created by Corentin on 01/05/16.
